@@ -6,7 +6,7 @@ public class matrixaddition {
         a = new int[10][10];
         b = new int[10][10];
         c = new int[10][10];
-        int i, j, t, n, m;
+        int i, j, n, m;
         System.out.print("Enter the size of array:");
         Scanner sc = new Scanner(System.in);
         m = sc.nextInt();

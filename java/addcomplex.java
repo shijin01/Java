@@ -2,23 +2,15 @@ import java.util.Scanner;
 
 public class addcomplex {
     public static void main(String[] arg) {
-        Scanner sc = new Scanner(System.in);
-        int a, b;
         System.out.println("Enter complex number1:");
-        System.out.print("real part:");
-        a = sc.nextInt();
-        System.out.print("imaginary part:");
-        b = sc.nextInt();
-        complex c1 = new complex(a, b);
+        complex c1 = new complex();
+        c1.readdata();
         System.out.println("Enter complex number2:");
-        System.out.print("real part:");
-        a = sc.nextInt();
-        System.out.print("imaginary part:");
-        b = sc.nextInt();
-        complex c2 = new complex(a, b);
+        complex c2 = new complex();
+        c2.readdata();
         complex c3 = new complex();
         c3.sumcomplex(c1, c2);
-        System.out.println("Sum Complex:" + c3.printcomplex());
+        System.out.println("Sum Complex no:" + c3.printcomplex());
 
     }
 }
@@ -26,12 +18,12 @@ public class addcomplex {
 class complex {
     int i, j;
 
-    complex() {
-    };
-
-    complex(int a, int b) {
-        i = a;
-        j = b;
+    void readdata() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("real part:");
+        this.i = sc.nextInt();
+        System.out.print("imaginary part:");
+        this.j = sc.nextInt();
     }
 
     void sumcomplex(complex ob1, complex ob2) {
